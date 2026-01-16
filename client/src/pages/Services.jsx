@@ -22,7 +22,7 @@ const Services = () => {
       title: "Full-Stack Development",
       shortDesc: "Complete web solutions",
       fullDesc: "End-to-end development using modern stacks like MERN, PERN, and LAMP. From database design to frontend interfaces.",
-      tags: ["React", "Node.js", "Express", "MongoDB", "MySQL"],
+      tags: ["React", "Node.js", "Express", "MySQL"],
       color: "#7c3aed"
     },
     {
@@ -31,7 +31,7 @@ const Services = () => {
       title: "Web Development",
       shortDesc: "Custom web applications",
       fullDesc: "Building responsive, interactive web applications with clean code and modern frameworks.",
-      tags: ["HTML/CSS", "JavaScript", "React", "Vue.js"],
+      tags: ["HTML/CSS", "JavaScript", "React"],
       color: "#06b6d4"
     },
     {
@@ -40,7 +40,7 @@ const Services = () => {
       title: "UI/UX Design",
       shortDesc: "Beautiful user interfaces",
       fullDesc: "Creating intuitive and aesthetically pleasing designs with Figma, Adobe XD, and user-centered principles.",
-      tags: ["Figma", "UI Design", "UX Research", "Prototyping"],
+      tags: ["Figma", "UI Design", "Prototyping"],
       color: "#10b981"
     },
     {
@@ -49,7 +49,7 @@ const Services = () => {
       title: "Web Maintenance",
       shortDesc: "Keep your site running",
       fullDesc: "Regular updates, security patches, performance optimization, and bug fixes for existing websites.",
-      tags: ["Updates", "Security", "Optimization", "Backups"],
+      tags: ["Updates", "Security", "Optimization"],
       color: "#f59e0b"
     },
     {
@@ -58,7 +58,7 @@ const Services = () => {
       title: "Security Implementation",
       shortDesc: "Secure your applications",
       fullDesc: "Implementing authentication, authorization, encryption, and security best practices.",
-      tags: ["JWT", "OAuth", "SSL/TLS", "Encryption"],
+      tags: ["JWT", "OAuth", "Encryption"],
       color: "#ef4444"
     },
     {
@@ -85,17 +85,8 @@ const Services = () => {
       title: "Deployment & Hosting",
       shortDesc: "Deploy to the cloud",
       fullDesc: "Deploying applications to platforms like Vercel, Netlify, AWS, and managing cloud infrastructure.",
-      tags: ["Vercel", "AWS", "Netlify", "Docker"],
+      tags: ["Vercel", "AWS", "Netlify"],
       color: "#6366f1"
-    },
-    {
-      id: 9,
-      icon: <SupportAgent sx={{ fontSize: 50 }} />,
-      title: "Training & Mentorship",
-      shortDesc: "Learn software development",
-      fullDesc: "One-on-one training, code reviews, and mentorship for aspiring developers.",
-      tags: ["JavaScript", "React", "Node.js", "Code Reviews"],
-      color: "#ec4899"
     }
   ];
 
@@ -162,16 +153,14 @@ const Services = () => {
           {/* Feature Banner */}
           <div className={styles.featureBanner}>
             <div className={styles.bannerContent}>
-              <h3>Algorithm Specialist</h3>
+              <h3>Algorithm</h3>
               <p>
-                Deeply interested in algorithms and data structures. 
+                Interested in algorithms and data structures. 
                 I solve complex problems with efficient approaches using 
                 optimal time and space complexity solutions.
               </p>
               <div className={styles.algorithmSkills}>
                 <span>Data Structures</span>
-                <span>Dynamic Programming</span>
-                <span>Graph Algorithms</span>
                 <span>Optimization</span>
               </div>
             </div>
@@ -179,24 +168,7 @@ const Services = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className={styles.statsBar}>
-          <div className={styles.statItem}>
-            <h4>100+</h4>
-            <p>Projects Delivered</p>
-          </div>
-          <div className={styles.statItem}>
-            <h4>99%</h4>
-            <p>Client Satisfaction</p>
-          </div>
-          <div className={styles.statItem}>
-            <h4>24/7</h4>
-            <p>Support Available</p>
-          </div>
-          <div className={styles.statItem}>
-            <h4>50+</h4>
-            <p>Technologies Used</p>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
