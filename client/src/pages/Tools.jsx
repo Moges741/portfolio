@@ -5,11 +5,10 @@ import {
   Terminal, 
   BugReport,
   Cloud,
-  Security,
   Devices,
-  Speed,
   Api
 } from '@mui/icons-material';
+import toolsImage from '../assets/images/image.png';
 import styles from './Tools.module.css';
 
 const Tools = () => {
@@ -20,7 +19,7 @@ const Tools = () => {
         { name: "C++", icon: <Code />, level: "Advanced", color: "#00599C" },
         { name: "JavaScript", icon: <DataObject />, level: "Expert", color: "#F7DF1E" },
         { name: "Python", icon: <Terminal />, level: "Intermediate", color: "#3776AB" },
-        { name: "TypeScript", icon: <Api />, level: "Advanced", color: "#3178C6" }
+        { name: "Java", icon: <BugReport />, level: "Intermediate", color: "#007396" },
       ]
     },
     {
@@ -29,7 +28,6 @@ const Tools = () => {
         { name: "HTML", icon: <Code />, level: "Expert", color: "#E34F26" },
         { name: "CSS", icon: <Devices />, level: "Expert", color: "#1572B6" },
         { name: "React.js", icon: <DataObject />, level: "Expert", color: "#61DAFB" },
-        { name: "Vue.js", icon: <Speed />, level: "Intermediate", color: "#4FC08D" },
         { name: "Bootstrap", icon: <Devices />, level: "Advanced", color: "#7952B3" },
         { name: "jQuery", icon: <Terminal />, level: "Advanced", color: "#0769AD" }
       ]
@@ -40,8 +38,6 @@ const Tools = () => {
         { name: "Node.js", icon: <Terminal />, level: "Expert", color: "#339933" },
         { name: "Express.js", icon: <Api />, level: "Expert", color: "#000000" },
         { name: "MySQL", icon: <Storage />, level: "Advanced", color: "#4479A1" },
-        { name: "MongoDB", icon: <Storage />, level: "Intermediate", color: "#47A248" },
-        { name: "PostgreSQL", icon: <Storage />, level: "Intermediate", color: "#336791" }
       ]
     },
     {
@@ -63,12 +59,7 @@ const Tools = () => {
         {/* Header */}
         <div className={styles.header}>
           <h2 className={styles.sectionTitle}>Tools & Technologies</h2>
-          <div className={styles.quoteBox}>
-            <p className={styles.quote}>
-              "Talk is cheap. Show me the code."
-            </p>
-            <p className={styles.quoteAuthor}>— Linus Torvalds</p>
-          </div>
+
           <p className={styles.subtitle}>
             My arsenal of tools and technologies I've mastered to build amazing things
           </p>
@@ -106,26 +97,6 @@ const Tools = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className={styles.statsSection}>
-          <div className={styles.statCard}>
-            <h4>12+</h4>
-            <p>Programming Languages</p>
-          </div>
-          <div className={styles.statCard}>
-            <h4>15+</h4>
-            <p>Frameworks & Libraries</p>
-          </div>
-          <div className={styles.statCard}>
-            <h4>50+</h4>
-            <p>Tools Mastered</p>
-          </div>
-          <div className={styles.statCard}>
-            <h4>100%</h4>
-            <p>Code Efficiency</p>
-          </div>
-        </div>
-
         {/* Philosophy Section */}
         <div className={styles.philosophySection}>
           <div className={styles.philosophyContent}>
@@ -144,9 +115,7 @@ const Tools = () => {
           {/* Image Container - Add your image here */}
           <div className={styles.toolsImage}>
             {/* Your image will go here */}
-            <div className={styles.imagePlaceholder}>
-              <p>Insert your tools/workspace image here</p>
-            </div>
+          
           </div>
         </div>
       </div>
