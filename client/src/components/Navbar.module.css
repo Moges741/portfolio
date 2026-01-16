@@ -1,0 +1,140 @@
+.navbar {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #4CC9F0;
+  letter-spacing: 1px;
+}
+
+/* Desktop Menu */
+.desktopMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+.desktopMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0.5rem 0;
+}
+
+.desktopMenu a:hover {
+  color: #ccc;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 1rem 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #333;
+}
+
+.mobileMenu a:last-child {
+  border-bottom: none;
+}
+
+.mobileMenu a:hover {
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+  
+  .menuButton {
+    display: block;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,214 @@
+.about {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.titleLine {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #7c3aed, #5b21b6);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Quote Box */
+.quoteBox {
+  background: rgba(124, 58, 237, 0.1);
+  border-left: 4px solid #7c3aed;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  color: #ddd;
+}
+
+.quoteAuthor {
+  text-align: right;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Image Section */
+.imageSection {
+  flex: 1;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+/* .profileImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+} */
+
+/* Add this for your actual image */
+.profileImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-image: url('../assets/images/moges222.png');
+  background-size: cover;
+  background-position: top;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+
+.imageDecoration {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #7c3aed;
+  border-radius: 20px;
+  z-index: -1;
+  transform: rotate(5deg);
+}
+
+/* Text Section */
+.textSection {
+  flex: 2;
+}
+
+.name {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.location {
+  color: #aaa;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.highlight {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* Skills Section */
+.skillsSection {
+  margin: 3rem 0;
+}
+
+.skillsTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.skillItem {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  transition: all 0.3s;
+}
+
+.skillItem:hover {
+  background: rgba(124, 58, 237, 0.2);
+  transform: translateY(-3px);
+  border-color: #7c3aed;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .profileImage {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quoteBox, .mainContent {
+  animation: fadeInUp 0.8s ease-out;
+}

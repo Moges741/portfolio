@@ -1,0 +1,302 @@
+.services {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: #7c3aed;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.divider {
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Services Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(124, 58, 237, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--card-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.serviceCard.expanded {
+  grid-column: span 2;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.iconWrapper {
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.serviceCard:hover .iconWrapper {
+  transform: scale(1.1);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.serviceShortDesc {
+  color: #aaa;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Expanded Content */
+.expandedContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.serviceCard.expanded .expandedContent {
+  max-height: 300px;
+  margin-top: 1.5rem;
+}
+
+.serviceFullDesc {
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.detailsBtn, .contactBtn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.detailsBtn {
+  background: transparent;
+  color: var(--card-color);
+  border: 2px solid var(--card-color);
+}
+
+.detailsBtn:hover {
+  background: var(--card-color);
+  color: white;
+}
+
+.contactBtn {
+  background: var(--card-color);
+  color: white;
+}
+
+.contactBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Expand Indicator */
+.expandIndicator {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  color: var(--card-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Feature Banner */
+.featureBanner {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(91, 33, 182, 0.1));
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  border: 2px solid rgba(124, 58, 237, 0.3);
+}
+
+.bannerContent h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #7c3aed;
+}
+
+.bannerContent p {
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.algorithmSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.algorithmSkills span {
+  background: rgba(124, 58, 237, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #7c3aed;
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+/* Stats Bar */
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statItem h4 {
+  font-size: 2.5rem;
+  margin: 0;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statItem p {
+  color: #aaa;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .serviceCard.expanded {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 3rem 1rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  
+  .statsBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .actionButtons {
+    flex-direction: column;
+  }
+  
+  .statsBar {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.serviceCard {
+  animation: float 3s ease-in-out infinite;
+}
+
+.serviceCard:hover {
+  animation: none;
+}
