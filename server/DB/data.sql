@@ -1,0 +1,16 @@
+CREATE TABLE projects (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  github_link VARCHAR(255),
+  live_link VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE contacts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  message TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
