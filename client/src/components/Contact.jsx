@@ -98,7 +98,6 @@ const Contact = () => {
         {/* Header */}
         <div className={styles.header}>
           <h2 className={styles.sectionTitle}>GET IN TOUCH</h2>
-          <h3 className={styles.subTitle}>DON'T BE SHY!</h3>
           <p className={styles.introText}>
             Feel free to get in touch with me. I am always open to discussing new projects, 
             creative ideas or opportunities to be part of your visions.
@@ -125,7 +124,7 @@ const Contact = () => {
               </div>
               <div className={styles.infoContent}>
                 <h4>MAIL ME</h4>
-                <p>moges@example.com</p>
+                <p>mogesse741@gmail.com</p>
               </div>
             </div>
             
@@ -135,16 +134,11 @@ const Contact = () => {
               </div>
               <div className={styles.infoContent}>
                 <h4>CALL ME</h4>
-                <p>+251 12 345 6789</p>
+                <p>+251924433166</p>
               </div>
             </div>
 
-            {/* Map/Image Placeholder */}
-            <div className={styles.mapPlaceholder}>
-              <div className={styles.mapContent}>
-                <p>📍 Your Location Map Here</p>
-              </div>
-            </div>
+
           </div>
 
           {/* Right Side - Contact Form */}

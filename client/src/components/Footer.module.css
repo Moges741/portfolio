@@ -1,0 +1,120 @@
+.footer {
+  background: #000;
+  color: white;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(124, 58, 237, 0.3);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Back to Top */
+.backToTop {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.backToTop:hover {
+  transform: translateX(-50%) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* Social Links */
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.socialLinks a {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.socialLinks a:hover {
+  background: rgba(124, 58, 237, 0.2);
+  color: #7c3aed;
+  transform: translateY(-3px);
+  border-color: #7c3aed;
+}
+
+/* Footer Navigation */
+.footerNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerNav a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footerNav a:hover {
+  color: #7c3aed;
+}
+
+/* Copyright */
+.copyright {
+  color: #666;
+}
+
+.copyright p {
+  margin: 0.5rem 0;
+}
+
+.tagline {
+  color: #7c3aed;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+  
+  .footerNav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .socialLinks a {
+    width: 40px;
+    height: 40px;
+  }
+}
