@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import image from '../assets/images/moges222.png';
 
 const Hero = () => {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
         
         {/* You can add your person image here */}
         <div className={styles.imageContainer}>
-          {/* Replace with your actual image */}
+          <img src={image}  alt="" />
           <div className={styles.profileImage}></div>
         </div>
       </div>

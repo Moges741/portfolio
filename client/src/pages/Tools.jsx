@@ -103,7 +103,7 @@ const Tools = () => {
             <h3>Why Tools Matter</h3>
             <p>
               A craftsman is only as good as their tools. I believe in choosing 
-              the right tool for every job—whether it's C++ for performance-critical 
+              the right tool for every job whether it's C++ for performance-critical 
               applications, React for dynamic UIs, or Node.js for scalable backends.
             </p>
             <p>

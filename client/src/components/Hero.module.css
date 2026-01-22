@@ -7,6 +7,7 @@
   padding: 2rem;
   position: relative;
   overflow: hidden;
+ 
 }
 
 .container {
@@ -94,27 +95,25 @@
   justify-content: center;
   align-items: center;
 }
-
-/* .profileImage {
-  width: 400px;
-  height: 400px;
+.imageContainer{
+  height: 300px;
+  width: 200px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-} */
+  margin-top: 50px;
 
-.profileImage {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background-image: url('../assets/images/moges222.png');
-  background-size: cover;
-  background-position: top;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+
 }
+.imageContainer img{
+   position: absolute;
+    /* top: 0; */
+    /* left: 10; */
+    right: 2px;
+    top: -20px;
+    border-radius: 50%;
 
+  object-fit: cover;
+}
 /* Decorative elements */
 .hero::before {
   content: '';
