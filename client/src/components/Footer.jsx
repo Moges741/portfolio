@@ -1,10 +1,10 @@
 import { 
   GitHub, 
   LinkedIn, 
-  Twitter, 
   Email,
   ArrowUpward
 } from '@mui/icons-material';
+import CodeIcon from '@mui/icons-material/Code';
 import styles from './Footer.module.css';
 import { Telegram } from '@mui/icons-material';
 
@@ -37,6 +37,9 @@ const Footer = () => {
           </a>
           <a href="mailto:mogesse741@gmail.com">
             <Email />
+          </a>  
+          <a href="https://leetcode.com/u/moges741/" target="_blank" rel="noopener noreferrer">
+            <CodeIcon />
           </a>
         </div>
 

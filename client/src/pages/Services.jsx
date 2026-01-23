@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import { 
   Code, 
   Web, 
@@ -137,7 +138,7 @@ const Services = () => {
                     
                     <div className={styles.actionButtons}>
                       <button className={styles.detailsBtn}>View Details</button>
-                      <button className={styles.contactBtn}>Contact</button>
+                      <button className={styles.contactBtn}> <Link to="contact"> Contact</Link></button>
                     </div>
                   </div>
                 </div>

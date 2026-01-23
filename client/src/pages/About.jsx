@@ -1,4 +1,5 @@
 import styles from './About.module.css';
+import aboutImage from '../assets/images/aboutMe.avif'
 
 const About = () => {
   const skills = [
@@ -28,7 +29,7 @@ const About = () => {
             {/* Left side - Image */}
             <div className={styles.imageSection}>
               <div className={styles.imageWrapper}>
-                {/* Your image will go here */}
+               <img src={aboutImage} alt="About Me" />
                 <div className={styles.profileImage}></div>
                 <div className={styles.imageDecoration}></div>
               </div>

@@ -6,6 +6,8 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
 }
 
 .navContainer {
@@ -30,17 +32,20 @@
   gap: 2rem;
 }
 
-.desktopMenu a {
+.desktopMenu Link {
   color: white;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s;
   padding: 0.5rem 0;
+
 }
 
 .desktopMenu a:hover {
   color: #ccc;
+  cursor: pointer;
+  
 }
 
 /* Mobile Menu Button */
@@ -114,6 +119,7 @@
   padding: 1rem 0;
   font-size: 1.1rem;
   border-bottom: 1px solid #333;
+  cursor: pointer;
 }
 
 .mobileMenu a:last-child {
@@ -123,7 +129,34 @@
 .mobileMenu a:hover {
   color: #ccc;
 }
+/* Light mode variables */
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f5f5f5;
+}
 
+/* Default dark mode */
+body {
+  --bg-color: #0f0f0f;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body.light-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Apply to all sections */
+section {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode section {
+  background: #f8f9fa !important;
+  color: #333 !important;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .desktopMenu {
