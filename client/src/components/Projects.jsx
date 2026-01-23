@@ -200,18 +200,18 @@ const Projects = () => {
       } catch (error) {
         console.error('Error loading projects:', error);
         // Fallback to local images if API fails
-        // setProjects([
-        //   {
-        //     id: 1,
-        //     title: "Netflix Clone",
-        //     description: "Frontend Netflix replica with video streaming, and personalized recommendations.",
-        //     category: "frontend",
-        //     image: netflix,
-        //     github_link: "https://github.com/Moges741/using-api",
-        //     live_link: "https://trailer-app-clone.netlify.app/",
-        //   },
-        //   // ... other projects
-        // ]);
+        setProjects([
+          {
+            id: 1,
+            title: "Netflix Clone",
+            description: "Frontend Netflix replica with video streaming, and personalized recommendations.",
+            category: "frontend",
+            image: netflix,
+            github_link: "https://github.com/Moges741/using-api",
+            live_link: "https://trailer-app-clone.netlify.app/",
+          },
+          // ... other projects
+        ]);
       } finally {
         setLoading(false);
       }
