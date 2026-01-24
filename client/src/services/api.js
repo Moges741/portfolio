@@ -77,7 +77,7 @@
 //   }
 // };
 // Vite automatically provides this variable
-const API_URL = import.meta.env.VITE_API_URL || import.meta.env.API_URL ;
+const API_URL = import.meta.env.VITE_API_URL || import.meta.env.API_URL || 'http://localhost:5000/api';
 
 // Contact API
 export const sendContactMessage = async (contactData) => {
