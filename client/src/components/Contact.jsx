@@ -185,29 +185,7 @@ const Contact = () => {
                     <ErrorIcon fontSize="small" /> {errors.email}
                   </div>
                 )}
-              </div>
-
-              {/* REMOVE THE SUBJECT FIELD COMPLETELY */}
-              {/* <div className={styles.formGroup}>
-                <label htmlFor="subject" className={styles.formLabel}>
-                  YOUR SUBJECT
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className={`${styles.formInput} ${errors.subject ? styles.error : ''}`}
-                  placeholder="What is this regarding?"
-                />
-                {errors.subject && (
-                  <div className={styles.errorMessage}>
-                    <ErrorIcon fontSize="small" /> {errors.subject}
-                  </div>
-                )}
-              </div> */}
-
+              </div>  
               <div className={styles.formGroup}>
                 <label htmlFor="message" className={styles.formLabel}>
                   YOUR MESSAGE
