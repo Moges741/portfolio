@@ -123,10 +123,10 @@ const db = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  port: process.env.DB_PORT || 19790, // Added fallback
-  ssl: {
-    ca: readFileSync(process.env.DB_SSL_CA || "./ca.pem") // SSL certificate
-  }
+  port: process.env.DB_PORT || 19790,
+  ssl: process.env.DB_SSL_CA ? {
+    ca: process.env.DB_SSL_CA.replace(/\\n/g, '\n') // ✅ Use certificate content directly
+  } : null
 });
 
 // routes
