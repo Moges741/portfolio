@@ -125,7 +125,7 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME,
   port: process.env.DB_PORT || 19790,
   ssl: process.env.DB_SSL_CA ? {
-    ca: process.env.DB_SSL_CA.replace(/\\n/g, '\n') // ✅ Use certificate content directly
+    ca: process.env.DB_SSL_CA.replace(/\\n/g, '\n') 
   } : null
 });
 
@@ -146,6 +146,7 @@ db.connect((err) => {
     });
   } else {
     console.log("MySQL connected successfully");
+
   }
 });
 
