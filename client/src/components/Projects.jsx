@@ -27,7 +27,7 @@ const Projects = () => {
       } catch (error) {
         console.error('Error loading projects:', error);
         // Fallback to local images if API fails
-        
+
         setProjects([
           {
             id: 1,
@@ -63,7 +63,7 @@ const Projects = () => {
     return (
       <section className={styles.projects} id="projects">
         <div className={styles.container}>
-          <div className={styles.loading}><Loader size={20} color="#4F46E5" /></div>
+          <div className={styles.loading}><Loader size={40} color="#4F46E5" /><p>project loading...</p></div>
         </div>
       </section>
     );
