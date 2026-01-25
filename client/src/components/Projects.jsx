@@ -4,6 +4,8 @@ import realEstate from '../assets/images/realEstate.jpeg';
 import amazon from '../assets/images/amazon.jpeg';
 import forum from '../assets/images/forum22.jpg';
 import netflix from '../assets/images/netflix.png';
+import Loader from 'react-spinners/CircleLoader';
+
 import { 
   GitHub, 
   Launch, 
@@ -25,6 +27,7 @@ const Projects = () => {
       } catch (error) {
         console.error('Error loading projects:', error);
         // Fallback to local images if API fails
+        
         setProjects([
           {
             id: 1,
@@ -60,7 +63,7 @@ const Projects = () => {
     return (
       <section className={styles.projects} id="projects">
         <div className={styles.container}>
-          <div className={styles.loading}>Loading projects...</div>
+          <div className={styles.loading}><Loader size={20} color="#4F46E5" /></div>
         </div>
       </section>
     );
