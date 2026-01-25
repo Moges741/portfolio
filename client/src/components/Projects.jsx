@@ -13,10 +13,10 @@ import styles from './Projects.module.css';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [projects, setProjects] = useState([]); // Change from static to state
+  const [projects, setProjects] = useState([]); 
   const [loading, setLoading] = useState(true);
 
-  // Fetch projects from backend on component mount
+
   useEffect(() => {
     const loadProjects = async () => {
       try {
