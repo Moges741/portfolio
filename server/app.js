@@ -193,7 +193,6 @@ app.get("/api/health", (req, res) => {
     service: "portfolio-backend"
   });
 });
-
 // Test route
 app.get("/", (req, res) => {
   res.json({ 
