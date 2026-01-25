@@ -10,7 +10,7 @@ import {
 // ✅ GET all projects
 export const getProjects = async (req, res) => {
   try {
-    const [projects] = await getProjectsModel(); // Use imported function
+    const projects = await getProjectsModel(); // Use imported function
     res.status(200).json(projects);
   } catch (error) {
     console.error("Error fetching projects:", error);

@@ -1,14 +1,12 @@
+
 // import db from "../DB/db.js";
 
-// export const getAllProjects = () => {
+// // Function names in model
+// export const getProjects = () => {
 //   return db.promise().query("SELECT * FROM projects ORDER BY id DESC");
 // };
 
-// export const getProjectById = (id) => {
-//   return db.promise().query("SELECT * FROM projects WHERE id = ?", [id]);
-// };
-
-// export const createProject = (project) => {
+// export const addProject = (project) => {
 //   const { title, description, github_link, live_link, image_url, category } = project;
   
 //   return db.promise().query(
@@ -16,6 +14,10 @@
 //      VALUES (?, ?, ?, ?, ?, ?)`,
 //     [title, description, github_link, live_link, image_url, category]
 //   );
+// };
+
+// export const getProjectById = (id) => {
+//   return db.promise().query("SELECT * FROM projects WHERE id = ?", [id]);
 // };
 
 // export const updateProject = (id, project) => {
@@ -32,39 +34,46 @@
 // export const deleteProject = (id) => {
 //   return db.promise().query("DELETE FROM projects WHERE id = ?", [id]);
 // };
-// projectModel.js
-import db from "../DB/db.js";
+// models/Project.js
+import db from "../config/db.js";
 
-// Function names in model
-export const getProjects = () => {
-  return db.promise().query("SELECT * FROM projects ORDER BY id DESC");
+// Get all projects ✅ CORRECT
+export const getProjects = async () => {
+  const [rows] = await db.query("SELECT * FROM projects ORDER BY id DESC");
+  return rows;
 };
 
-export const addProject = (project) => {
+// Add a new project ✅ CORRECT
+export const addProject = async (project) => {
   const { title, description, github_link, live_link, image_url, category } = project;
-  
-  return db.promise().query(
+  const [result] = await db.query(
     `INSERT INTO projects (title, description, github_link, live_link, image_url, category)
      VALUES (?, ?, ?, ?, ?, ?)`,
     [title, description, github_link, live_link, image_url, category]
   );
+  return result;
 };
 
-export const getProjectById = (id) => {
-  return db.promise().query("SELECT * FROM projects WHERE id = ?", [id]);
+// Get project by ID ✅ FIXED - Added WHERE clause
+export const getProjectById = async (id) => {
+  const [rows] = await db.query("SELECT * FROM projects WHERE id = ?", [id]);
+  return rows[0];
 };
 
-export const updateProject = (id, project) => {
+// Update a project ✅ CORRECT
+export const updateProject = async (id, project) => {
   const { title, description, github_link, live_link, image_url, category } = project;
-  
-  return db.promise().query(
+  const [result] = await db.query(
     `UPDATE projects 
      SET title = ?, description = ?, github_link = ?, live_link = ?, image_url = ?, category = ?
      WHERE id = ?`,
     [title, description, github_link, live_link, image_url, category, id]
   );
+  return result;
 };
 
-export const deleteProject = (id) => {
-  return db.promise().query("DELETE FROM projects WHERE id = ?", [id]);
+// Delete a project ✅ FIXED - Added WHERE clause
+export const deleteProject = async (id) => {
+  const [result] = await db.query("DELETE FROM projects WHERE id = ?", [id]);
+  return result;
 };
