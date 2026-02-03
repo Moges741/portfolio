@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'; // Add useEffect
-import realEstate from '../assets/images/realEstate.jpeg';
-import amazon from '../assets/images/amazon.jpeg';
+import realEstate from '../assets/images/image copy 2.png';
+import amazon from '../assets/images/image copy.png';
 import forum from '../assets/images/forum22.jpg';
 import netflix from '../assets/images/netflix.png';
 import Loader from 'react-spinners/CircleLoader';
@@ -37,7 +37,35 @@ const Projects = () => {
             image: netflix,
             github_link: "https://github.com/Moges741/using-api",
             live_link: "https://trailer-app-clone.netlify.app/",
+
           },
+          {
+            id: 2,
+            title: "Amazon Clone",
+            description: "Full-stack Amazon clone with user authentication, product listings, and shopping cart functionality.",
+            category: "fullstack",
+            image: amazon,
+            github_link: "https://github.com/Moges741/Amazon-Project",
+            live_link: "https://amazon-gebeya.vercel.app/",
+          },
+          {
+            id: 3,
+            title: "Evangadi Forum",
+            description: "A community forum platform for discussions, Q&A, and knowledge sharing among users.",
+            category: "fullstack",
+            image: forum,
+            github_link: "https://github.com/Moges741/evangadi_forum",
+            live_link: "https://studentsforum.vercel.app/signin",
+          },
+          {
+            id: 4,
+            title: "RealEstate Platform",
+            description: "A real estate listing platform with property search, filtering, and detailed property views.",
+            category: "fullstack",
+            image: realEstate,
+            github_link: "https://github.com/Moges741/realestate1",
+            live_link: "https://emrealestate.vercel.app/",
+          }
           // ... other projects
         ]);
       } finally {
