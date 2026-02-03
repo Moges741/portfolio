@@ -55,7 +55,7 @@ const Projects = () => {
             category: "fullstack",
             image: forum,
             github_link: "https://github.com/Moges741/evangadi_forum",
-            live_link: "https://studentsforum.vercel.app/signin",
+            live_link: "https://studentsforum.vercel.app",
           },
           {
             id: 4,
